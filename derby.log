@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed May 02 15:55:06 EDT 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-0163-226c-3370-00001d668a08 
+on database directory memory:/Users/Shared/workspace/Creational-Design-Patterns/codejava/webdb with class loader sun.misc.Launcher$AppClassLoader@18b4aac2 
+Loaded from file:/Users/Shared/workspace/Creational-Design-Patterns/lib/derby.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_162-b12
+user.dir=/Users/Shared/workspace/Creational-Design-Patterns
+os.name=Mac OS X
+os.arch=x86_64
+os.version=10.13.3
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
