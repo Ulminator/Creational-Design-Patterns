@@ -40,6 +40,24 @@ Pitfalls
 - Sometimes confused for Factory
     - If it needs an argument in that method, it is a factory.
     
+Builder
+-------
+- Handles complex constructors
+- Large number of parameters
+- Force immutability once created
+- Examples:
+    - StringBuilder
+    - DocumentBuilder
+    - Locale.Builder
+
+Telescoping Constructors - Creation of multiple constructors wiht each parameter variation
+
+- Flexibility over telescoping constructors
+- Static inner class
+- Calls appropriate constructor
+- Negates need for exposed setters
+- Can take advantage of generics
+
 Factory
 -------
 - Returns various instances
