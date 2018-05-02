@@ -1,3 +1,5 @@
+https://app.pluralsight.com/player?course=design-patterns-java-creational&author=bryan-hansen&name=design-patterns-java-creational-m2-singleton&clip=12&mode=live
+
 Pattern Groups
 
 Creational - Structural - Behavioral
