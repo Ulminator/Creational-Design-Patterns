@@ -1,28 +1,17 @@
-https://app.pluralsight.com/player?course=design-patterns-java-creational&author=bryan-hansen&name=design-patterns-java-creational-m2-singleton&clip=12&mode=live
-
-Pattern Groups
-
-Creational - Structural - Behavioral
-
-Creational Patterns
-
-Singleton
-Builder
-Prototype
-Factory
-Abstract Factory
-
+#Creational Patterns
 
 Singleton
 ---------
-- Only one instance created
-- Guarantees control of a resource
-- Lazily loaded
-- Examples: 
-	- Runtime
-	- Logger
-	- Spring Beans
-	- Graphics Managers
+
+- Concepts
+    - Only one instance created
+    - Guarantees control of a resource
+    - Lazily loaded
+    - Examples: 
+	    - Runtime
+    	- Logger
+    	- Spring Beans
+    	- Graphics Managers
 
 Class is responsible for creating itself and managing its lifecycle
 Static in nature
@@ -42,13 +31,16 @@ Pitfalls
     
 Builder
 -------
-- Handles complex constructors
-- Large number of parameters
-- Force immutability once created
-- Examples:
-    - StringBuilder
-    - DocumentBuilder
-    - Locale.Builder
+
+- Concepts
+    - Handles complex constructors
+    - Large number of parameters
+    - Force immutability once created
+    - Works with legacy code
+    - Examples:
+        - StringBuilder
+        - DocumentBuilder
+        - Locale.Builder
 
 Telescoping Constructors - Creation of multiple constructors wiht each parameter variation
 
@@ -58,9 +50,69 @@ Telescoping Constructors - Creation of multiple constructors wiht each parameter
 - Negates need for exposed setters
 - Can take advantage of generics
 
+Prototype
+---------
+- Implemented around a clone
+- Avoids calling complex constructors
+- Difficult to implement in legacy code
+
+- Concepts
+    - Avoids costly construction
+    - Avoids subclassing
+    - Typically does not use "new"
+    - Often utilizes an Interface
+    - Usually implemented in a Registry
+    - Example:
+        - java.lang.Object#clone()
+    
+- Pitfalls
+    - Somewhat not clear when to use
+        - Application creates a lot of objects
+    - Used with other patterns
+        - Registry
+    - Shallow VS Deep Copy
+
 Factory
 -------
 - Returns various instances
     - Multiple constructors
 - Interface driven
 - Adaptable to environment more easily
+
+- Concepts
+    - Does not expose instantiation logic
+    - Defer to subclass
+    - Common interface
+    - Specified by architecture, implemented by user
+    - Examples:
+        - Calendar
+        - ResourceBundle
+        - NumberFormat
+        
+- Responsible for lifecycle
+- Common Interface
+- Concrete Classes
+- Parameterized create method
+
+- Pitfalls
+    - Complexity
+    - Creation in subclass
+    - Refactoring (Need to design at beginning and plan accordingly)
+    
+Abstract Factory
+----------------
+- Concepts
+    - Factory of Factories
+    - Factory of related objects
+    - Common Interface
+    - Defer to Subclasses
+    - Examples:
+        - DocumentBuilder
+        - Frameworks
+        
+- Pitfalls
+    - Complexity
+    - Runtime switch
+    - Pattern within a pattern
+    - Problem specific
+    - Starts as a Factory
